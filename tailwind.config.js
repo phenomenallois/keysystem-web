@@ -1,5 +1,3 @@
-
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,9 +5,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif', ],
+      },
       animation: {
         slide: 'slide 30s linear infinite alternate',
       },
+      
       keyframes: {
         slide: {
           '0%': { transform: 'translateX(0%)' },

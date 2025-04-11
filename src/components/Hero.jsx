@@ -1,4 +1,5 @@
 import React from "react";
+
 import image3 from "../assets/image3.png";
 import image1 from "../assets/image1.png";
 import image2 from "../assets/image2.png";
@@ -51,73 +52,75 @@ const Hero = () => {
       </p>
 
       {/* CTA Buttons */}
-      <div className="flex justify-center gap-6 mb-10">
-        <button className="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full">
-          Get Started
-        </button>
-        <button className="border border-blue-400 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full">
-          Learn More
-        </button>
-      </div>
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mb-10">
+  <button className="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full w-full sm:w-auto">
+    Get Started
+  </button>
+  <button className="border border-blue-400 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full w-full sm:w-auto">
+    Learn More
+  </button>
+</div>
 
-      {/* Hero Image */}
-      <div className="flex justify-center">
+{/* Hero Image */}
+<div className="flex justify-center px-4">
+  <img
+    src={image3}
+    alt="IT Consultant"
+    className="rounded-xl w-full max-w-4xl"
+  />
+</div>
+
+
+   {/* Sliding Partner Logos Section */}
+<div className="overflow-hidden mt-12 px-4">
+  <div className="whitespace-nowrap animate-slide group hover:[animation-play-state:paused]">
+    {[...Array(2)].flatMap(() =>
+      [
+        { name: "Sterling", src: sterling },
+        { name: "Crusader", src: crusader },
+        { name: "NAFC", src: nafc },
+        { name: "NBF", src: nbf },
+        { name: "Military", src: military },
+        { name: "Stanbic", src: stanbic },
+        { name: "Bank Muscat", src: muscat },
+      ].map((logo, index) => (
         <img
-          src={image3}
-          alt="IT Consultant"
-          className="rounded-xl w-[90%] max-w-4xl"
+          key={`${logo.name}-${index}`}
+          src={logo.src}
+          alt={logo.name}
+          className="inline-block h-16 w-auto mx-4 md:mx-6 object-contain"
         />
-      </div>
+      ))
+    )}
+  </div>
+</div>
 
-      {/* Sliding Partner Logos Section */}
-      <div className="overflow-hidden mt-12">
-        <div className="whitespace-nowrap animate-slide group hover:[animation-play-state:paused]">
-          {[...Array(2)].flatMap(() =>
-            [
-              { name: "Sterling", src: sterling },
-              { name: "Crusader", src: crusader },
-              { name: "NAFC", src: nafc },
-              { name: "NBF", src: nbf },
-              { name: "Military", src: military },
-              { name: "Stanbic", src: stanbic },
-              { name: "Bank Muscat", src: muscat },
-            ].map((logo, index) => (
-              <img
-                key={`${logo.name}-${index}`}
-                src={logo.src}
-                alt={logo.name}
-                className="inline-block h-16 w-auto mx-6 object-contain"
-              />
-            ))
-          )}
-        </div>
-      </div>
+{/* Trusted Consultant Section */}
+<div className="mt-24 px-4 text-white text-center">
+  <h2 className="text-3xl md:text-4xl font-bold mb-2">
+    Why we are your Trusted Consultant
+  </h2>
+  <p className="text-blue-300 text-sm mb-4">
+    Empowering Businesses with Cutting-edge Technology
+  </p>
+  <p className="text-lg max-w-2xl mx-auto mb-6">
+    Excellence isn’t a goal, it’s our DNA; our relentless pursuit of excellence
+    is the driving force behind our success. Excellence is our legacy, and we
+    are proud to carry it forward.
+  </p>
+  <p className="text-white mb-8">
+    Watch the video to see how we are innovating to keep businesses on top of
+    their games.
+  </p>
+  <div className="flex justify-center px-2">
+    <img
+      src={image1}
+      alt="IT Consultant"
+      className="rounded-xl w-full max-w-4xl"
+    />
+  </div>
+</div>
 
-      {/* Trusted Consultant Section */}
-      <div className="mt-24 px-4 text-white">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2">
-          Why we are your Trusted Consultant
-        </h2>
-        <p className="text-blue-300 text-sm mb-4">
-          Empowering Businesses with Cutting-edge Technology
-        </p>
-        <p className="text-lg max-w-3xl mx-auto mb-6">
-          Excellence isn’t a goal, it’s our DNA; our relentless pursuit of
-          excellence is the driving force behind our success. Excellence is our
-          legacy, and we are proud to carry it forward.
-        </p>
-        <p className="text-white mb-8">
-          Watch the video to see how we are innovating to keep businesses on top
-          of their games.
-        </p>
-        <div className="flex justify-center">
-          <img
-            src={image1}
-            alt="IT Consultant"
-            className="rounded-xl w-[90%] max-w-4xl"
-          />
-        </div>
-      </div>
 
       {/* Offerings Section */}
       <div className="mt-24 px-4">
@@ -208,9 +211,12 @@ const Hero = () => {
 
           {/* Compliance Certifications Section */}
           <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray mb-4">
-              Compliance Certifications/Standards We Specialize In
-            </h2>
+           
+
+            <h2 className="text-2xl md:text-3xl font-bold text-gray mb-4 font-montserrat">
+  Compliance Certifications/Standards We Specialize In
+</h2>
+
             <p className="text-blue-300 max-w-2xl mx-auto mb-6">
               Elevate Your Organization's Security Posture with Our
               Compliance/Standards Consulting Services

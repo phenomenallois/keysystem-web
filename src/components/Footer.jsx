@@ -4,13 +4,14 @@ import cognizant from "../assets/cognizant.png";
 import temenos from "../assets/temenos.png";
 import net from "../assets/net.png";
 import tech from "../assets/tech.png";
+import keysystem from "../assets/keysystem.png";
 
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-blue-800 to-teal-200text-gray-300 pt-16 pb-10 px-6 md:px-12">
       {/* Our Partners Section */}
       <div className="max-w-7xl mx-auto text-center mb-20">
-        <h2 className="text-2xl md:text-3xl font-bold text-black mb-2">Our Partners</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Our Partners</h2>
         <p className="text-gray-400 mb-6">Creating a Synergy with global brands</p>
         <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12">
         <img src={software}alt="sotware"className="h-6 md:h-8" />
@@ -49,13 +50,17 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo and Copyright */}
         <div>
-          <img src="/logo-black.png" alt="KeySystem Logo" className="h-8 mb-4" />
+        <img
+            src={keysystem}
+            alt="IT Consultant"
+            className="w-24 rounded-xl" // 6rem width
+          />
           <p className="text-sm">&copy; 2025 KeySystem Technologies. All rights reserved.</p>
         </div>
 
         {/* Services */}
         <div>
-          <h3 className="text-black font-semibold mb-4">SERVICES</h3>
+          <h3 className="text-white font-semibold mb-4">SERVICES</h3>
           <ul className="text-sm space-y-2">
             <li>Core refresh</li>
             <li>Application management services</li>
@@ -73,7 +78,7 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-black font-semibold mb-4">QUICK LINKS</h3>
+          <h3 className="text-white font-semibold mb-4">QUICK LINKS</h3>
           <ul className="text-sm space-y-2">
             <li>About Us</li>
             <li>Sitemap</li>
@@ -82,24 +87,24 @@ const Footer = () => {
 
         {/* Contact */}
         <div>
-          <h3 className="text-black font-semibold mb-4">CONTACT</h3>
+          <h3 className="text-white font-semibold mb-4">CONTACT</h3>
           <div className="text-sm space-y-4">
             <div>
-              <p className="font-semibold text-black">Nigeria</p>
+              <p className="font-semibold text-white">Nigeria</p>
               <p>550 Adesola Omotola Close, Off Samuel Adedoyin Street, Victoria Island</p>
               <p>Tel: +234 818 444 1444</p>
             </div>
             <div>
-              <p className="font-semibold text-black">United Kingdom</p>
+              <p className="font-semibold text-white">United Kingdom</p>
               <p>39 Kenyon Lane, Off Moston Lane, Moston, Manchester, United Kingdom, M40 9LG</p>
               <p>Tel: +44 750 483 2817</p>
             </div>
             <div>
-              <p className="font-semibold text-black">Canada</p>
+              <p className="font-semibold text-white">Canada</p>
               <p>Tel: +1 647 977 1435</p>
             </div>
             <div>
-              <p className="font-semibold text-black">Email</p>
+              <p className="font-semibold text-white">Email</p>
               <p>enquiries@keysystemltc</p>
             </div>
           </div>
